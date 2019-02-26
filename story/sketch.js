@@ -21,7 +21,7 @@ function mouseClicked() {
     if (currentSetting == "endtwo") currentSetting = "beginning";
 
     // detect which character is clicked
-    else if (chapter == "day") {
+    else if (currentSetting == "beginning") {
         // clicked the orange
         //ellipse(200, 400, 160, 100);
         var hammer = dist(mouseX, mouseY, 200, 400);
