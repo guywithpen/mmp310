@@ -112,7 +112,7 @@ function draw() {
 
         fill('#308744');
         noStroke();
-        text(story, 200, 700, 800, 300);
+        text(story, 150, 700, 800, 300);
 
 
     } else if (currentSetting == "endone") {
