@@ -12,8 +12,14 @@ function setup() {
 		for (let y = 0; y <= height; y += h) {
             noFill();
             stroke(255);
+            var = random(3);
+            if (r > 2) {
             bezier(x, y, x + w, y, x, y + h, x + w, y + h);
-             
-		}
+            } else if (r > 1) {
+             bezier(x, y, x + w, y, x, y + h, x + w, y + h);
+            } else {
+            bezier(x, y, x + w, y, x, y + h, x + w, y + h);
+            }
+		
 	}
 }
