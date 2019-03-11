@@ -20,10 +20,15 @@ function setup() {
                 ellipse(x, y, 35);
                 ellipse(x + w, y + h, 45);
             } else if (r > 1) {
-                bezier(x, y + 6, x + w, y, x, y + h, x + w, y + h);
+                bezier(x, y , x + w, y+30, x+ 20, y + h, x + w, y + h);
             } else {
-                bezier(x, y, x + w, y, x, y + h, x + w, y + h);
+                bezier(x, y, x + w, y-50, x-80, y + h, x + w, y + h);
             }
 
         }
     }
+}
+
+function mouseClicked() {
+    save('save_image.jpg');
+}
