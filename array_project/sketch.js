@@ -19,7 +19,7 @@ function draw() {
         
     }
 
-    for (let i = 0; i < points.length; i++) {
+    for (let i = 15; i < points.length; i++) {
         let x = points[i][0];
         let y = points[i][1];
         let c = points[i][2];
@@ -30,22 +30,6 @@ function draw() {
     }
     
     	translate(width/2, height/2);
-	rotate(rot);
-	rot += 0.01;
-
-	for (let i = 0; i < points.length; i++) {
-		let x = points[i][0] - width/2; // offset the drawing 
-		let y = points[i][1] - height/2; 
-		    fill(c);
-    ellipse(x, y - 50, 200); // face
-    //fill(0);
-    //ellipse(x + 50, 50, 50); // left eyeS
-    //ellipse(x - 50, 50, 50); // right eye
-    fill('#a5639c');
-    triangle(x - 60, y + 3, x + 60, y + 3, x + 1, y + 20); // mouth
-    arc(x - 40, y - 80, 50, 100, 0, PI + QUARTER_PI, CHORD);
-    arc(x + 40, y - 80, 50, 100, 6.6 - QUARTER_PI, PI, CHORD);
-	}
 
 }
 
