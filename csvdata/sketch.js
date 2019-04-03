@@ -1,29 +1,29 @@
-var water;
+var names;
 function preload() {
-	Names = loadTable('Popular_Baby_Names.csv', 'csv', 'header');
+	names = loadTable('Popular_Baby_Names.csv', 'csv', 'header');
 }
 function setup() {
 	createCanvas(640, 360);
 	background(51);
 	textAlign(CENTER, CENTER);
+    noStroke();
 
-	let x = 50;
-	let y = 25;
-	for (let i = 0; i < Names.getRowCount(); i++) {
-		let Rank = Popular_Baby_Names.getNum(i, 'Rank');
-		let Count = Popular_Baby_Names.getNum(i, 'Count') / 4;
+
+	for (let i = 0; i < names.getRowCount(); i++) {
+		let rank = names.getNum(i, 'Rank');
+		let count = names.getNum(i, 'Count');
+        let year = names.getNum(i, 'Year of Birth');
+        let h = map(count, 0, 387, 0, height );
+        var w = 2;
+        var x = i * w;
 
 		fill('lightblue');
-		ellipse(x, y, Count);
+		rect(x, height - count, w, count );
 
 		fill('white');
 		noStroke();
-		text(Year of Birth, x, y);
+//		text(rank, x, y);
 
-		x += 100;
-		if (x > width) {
-			x = 50;
-			y += 50;
-		}
+
 	}
 }
