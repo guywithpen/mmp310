@@ -1,4 +1,5 @@
 var sprite;
+var laser =[];
 var spaceship = {
     x: 0,
     y: 200,
@@ -58,5 +59,9 @@ function draw() {
         asteroids[i].display();
         asteroids[i].update();
         asteroids[i].collide();
+        
+        if (keyisDown(32) || keyIsDown(88)) {
+            laser.push(new laser());
+        }
     }
 }

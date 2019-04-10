@@ -1,4 +1,4 @@
-class Asteroid {
+class Asteroid extends Entity {
 	constructor() {
 		this.x = random(width);
 		this.y = -100;
