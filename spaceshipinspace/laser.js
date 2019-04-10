@@ -1,10 +1,10 @@
-class Asteroid {
+class Laser {
 	constructor() {
-		this.x = random(width);
+		//this.x = random(width);
 		this.y = -100;
-		this.size = 100;
+		this.size = 45;
 		this.speed = {
-			x: random(-1, 1),
+			//x: random(-1, 1),
 			y: random(5)
 		};
 	}
@@ -21,13 +21,9 @@ class Asteroid {
 	}
 	
 	collide() {
-		var d = dist(this.x -50, this.y -50, spaceship.x, spaceship.y);
+		var d = dist(this.x, this.y, asteroid.x, asteroid.y);
 		if (d < this.size / 2) {
-			textSize(100);
-			textAlign(CENTER, CENTER);
-			fill('red');
-			text("F A L L E N", width/2, height/2);
-			noLoop();	
+		 keySpace = false;
 		}
 	}
 }
