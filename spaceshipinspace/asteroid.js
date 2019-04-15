@@ -22,6 +22,10 @@ class Asteroid extends Entity {
 			text("F A L L E N", width/2, height/2);
 			noLoop();	
 		}
+        
+        if(this.x <= 0  || this.x >= width) {
+            
+        }
 	}
 }
 

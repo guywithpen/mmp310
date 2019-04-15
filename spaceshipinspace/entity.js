@@ -23,7 +23,7 @@ class Entity {
             size = other.sizes;
         }
         if (d < size / 2) {
-            return true:
+            return true;
         } else {
             return false
         }

@@ -1,15 +1,12 @@
-var sprite;
+
 class Spaceship extends Entity {
     constructor() {
         super(width / 2, height - 200);
     }
 
-    function preload() {
-        sprite = loadImage("sprite.png");
-    }
+    
 
     display() {
-
         image(sprite, this.x, this.y);
     }
 
