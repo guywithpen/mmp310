@@ -1,27 +1,20 @@
 class Asteroid extends Entity {
 	constructor() {
-		this.x = random(width);
-		this.y = -100;
-		this.size = 100;
-		this.speed = {
-			x: random(-1, 1),
-			y: random(5)
-		};
+		super(random(width), -100);
+		this.speed.x = random(-1, 1);
+		this.speed.y = random(5);
+		
+		this.color = color(random(100, 200), random(200), random(200));
 	}
 	
 	display() {
-		fill(0);
+		fill(this.color);
 		noStroke();
 		ellipse(this.x, this.y, this.size);
 	}
 	
-	update() {
-		this.x += this.speed.x;
-		this.y += this.speed.y;
-	}
-	
 	collide() {
-		var d = dist(this.x -50, this.y -50, spaceship.x, spaceship.y);
+		var d = dist(this.x, this.y, spaceship.x, spaceship.y);
 		if (d < this.size / 2) {
 			textSize(100);
 			textAlign(CENTER, CENTER);
@@ -31,3 +24,4 @@ class Asteroid extends Entity {
 		}
 	}
 }
+

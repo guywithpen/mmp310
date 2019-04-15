@@ -1,13 +1,14 @@
+var strike;
 class Laser extends Entity {
-    construnctor() {
-        super(spaceship.x, spaceship.y);
-        this.speed.y = -10;
+	constructor() {
+		super(spaceship.x, spaceship.y);
+		this.speed.y = -10;
+	}
+	function preload() {
+        strike = loadImage("sprite.png");
     }
-    
-    display() {
-        fill('blue');
-        noStroke();
-        rectMode(CENTER);
-        rect(this.x, this.y, 10, 25)
-    }
+
+	display() {
+	image(strike, this.x, this.y);
+	}
 }
