@@ -1,10 +1,9 @@
-
 class Spaceship extends Entity {
     constructor() {
-        super(width / 2, height - 200);
+        super(width / 5, height - 1500);
     }
 
-    
+
 
     display() {
         image(sprite, this.x, this.y);
