@@ -1,21 +1,28 @@
+/*
+	spaceship class
+*/
+
 class Spaceship extends Entity {
-    constructor() {
-        super(width / 5, height - 1500);
-    }
-
-
-
-    display() {
-        image(sprite, this.x, this.y);
-    }
-
-    controls() {
-        if (keyIsDown(RIGHT_ARROW)) {
-            this.speed.x = 5;
-        } else if (keyIsDown(LEFT_ARROW)) {
-            this.speed.x = -5;
-        } else {
-            this.speed.x = 0;
-        }
-    }
+	constructor() {
+		super(width/2, height - 200);
+	}
+	
+	display() {
+		fill('pink');
+		triangle(
+			this.x, this.y, 
+			this.x - this.size, this.y + this.size * 2, 
+			this.x + this.size, this.y + this.size * 2
+		);
+	}
+	
+	controls() {
+		if (keyIsDown(RIGHT_ARROW)) {
+			this.speed.x = 5;
+		} else if (keyIsDown(LEFT_ARROW)) {
+			this.speed.x = -5;
+		} else {
+			this.speed.x = 0;	
+		}
+	}
 }
