@@ -34,8 +34,11 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	noStroke();
 	rectMode(CENTER);
+    imageMode(CENTER);
 	textAlign(CENTER, CENTER);
 	spaceship = new Spaceship();
+    
+    frameRate(12);
 }
 
 function draw() {

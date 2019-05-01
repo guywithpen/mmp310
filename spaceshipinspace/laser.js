@@ -18,6 +18,11 @@ class Laser extends Entity {
 	display() {
 		
 		image(strike, this.x, this.y);
+        
+        // hit box
+        noFill();
+        stroke('red');
+        ellipse(this.x, this.y, this.size);
 	}
 	
 	update() {

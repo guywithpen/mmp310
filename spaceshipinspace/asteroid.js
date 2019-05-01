@@ -11,6 +11,10 @@ class Asteroid extends Entity {
 		fill(this.color);
 		noStroke();
 		ellipse(this.x, this.y, this.size);
+        
+        noFill();
+        stroke('green');
+        ellipse(this.x, this.y, this.size);
 	}
 	
 	update() {
