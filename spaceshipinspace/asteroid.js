@@ -1,6 +1,3 @@
-/*
-	asteroid class
-*/
 
 class Asteroid extends Entity {
 	constructor() {

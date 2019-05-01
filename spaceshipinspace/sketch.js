@@ -7,6 +7,8 @@ var spaceship;
 var asteroids = [];
 var lasers = [];
 var powerups = [];
+var sprite;
+var strike;
 
 // probability asteroid spawned in each frame
 var asteroidProb = 99;
@@ -24,7 +26,8 @@ var score = 0;
 var lives = 3;
 
 function preload() {
-	// if you have images
+	 sprite = loadImage("sprite.png");
+    strike = loadImage("strike.png");
 }
 
 function setup() {
@@ -80,6 +83,7 @@ function draw() {
 		asteroids[i].display();
 		asteroids[i].update();
 		
+	
 		// collision with other asteroids
 		for (let j = 0; j < asteroids.length; j++) {
 			if (i != j) {

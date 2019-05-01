@@ -16,10 +16,8 @@ class Laser extends Entity {
 	}
 	
 	display() {
-		fill(this.color.r, this.color.g, this.color.b);
-		noStroke();
-		rectMode(CENTER);
-		rect(this.x, this.y, this.width, this.height);
+		
+		image(strike, this.x, this.y);
 	}
 	
 	update() {
