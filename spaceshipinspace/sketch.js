@@ -38,7 +38,7 @@ function setup() {
 	textAlign(CENTER, CENTER);
 	spaceship = new Spaceship();
     
-    frameRate(12);
+    frameRate(60);
 }
 
 function draw() {
