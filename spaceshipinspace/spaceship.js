@@ -4,7 +4,7 @@
 
 class Spaceship extends Entity {
     constructor() {
-        super(width / 2, height - 200);
+        super(width / 2, height - 120);
     }
 
     display() {

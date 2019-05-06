@@ -5,6 +5,10 @@ class Asteroid extends Entity {
 		this.speed.x = random(-1, 1);
 		this.speed.y = random(5);
 		this.color = color(random(100, 200), random(200), random(200));
+        
+        this.start = this.x;
+        this.angle = 0;
+        this.spread = random(200, 400);
 	}
 	
 	display() {
@@ -19,16 +23,17 @@ class Asteroid extends Entity {
 	
 	update() {
 		super.update();
+        
+        this.x = this.start + sin(this.angle) * this.spread;
+        
+        this.angle += 0.025;
+        
 		
 		// remove asteroids below the canvas
 		if (this.y > height + this.size) {
 			this.remove(asteroids);
 		}
 		
-		// bounce asteroids off sides
-		if (this.x <= 0 || this.x >= width) {
-			this.speed.x *= -1;
-		}
 		
 		
 	}

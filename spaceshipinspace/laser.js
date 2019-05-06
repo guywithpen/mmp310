@@ -5,7 +5,14 @@
 class Laser extends Entity {
 	constructor() {
 		super(spaceship.x, spaceship.y);
-		this.speed.y = -10;
+        const delta = {
+            x: mouseX - spaceship.x,
+            y: mouseY - spaceship.y
+        }
+        this.speed.x = delta.x / 20;
+		this.speed.y = delta.y / 20;
+        this.angle = tan(delta.x / delta.y);
+        
 		this.width = 10;
 		this.height = 25;
 		this.color = {
@@ -16,13 +23,18 @@ class Laser extends Entity {
 	}
 	
 	display() {
+        
+        push();
+        translate(this.x, this.y);
+//        rotate(this.angle);
 		
-		image(strike, this.x, this.y);
+		image(strike, 0, 0);
         
         // hit box
         noFill();
         stroke('red');
-        ellipse(this.x, this.y, this.size);
+        ellipse(0, 0, this.size);
+        pop();
 	}
 	
 	update() {
