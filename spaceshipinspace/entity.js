@@ -17,13 +17,9 @@ class Entity {
 	
 	collide(other) {
 		var d = dist(this.x, this.y, other.x, other.y);
-		var size;
-		if (this.size > other.size) {
-			size = this.size;
-		} else {
-			size = other.size;
-		}
-		if (d < size / 2) {
+		var size = this.size / 2 + other.size / 2;
+		
+		if (d < size) {
 			return true;
 		} else {
 			return false;

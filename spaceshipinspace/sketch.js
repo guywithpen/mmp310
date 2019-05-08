@@ -60,7 +60,7 @@ function draw() {
     // add lasers
     if (laserCounter <= 0) {
         // shoot a laser
-        if (mouseIsPressed) {
+        if (mouseIsPressed ) {
             
             lasers.push(new Laser());
             laserCounter = laserTimeout;
