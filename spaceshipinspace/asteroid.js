@@ -12,13 +12,11 @@ class Asteroid extends Entity {
 	}
 	
 	display() {
-		fill(this.color);
-		noStroke();
-		ellipse(this.x, this.y, this.size);
+	  image(terror, this.x, this.y);
         
-        noFill();
-        stroke('green');
-        ellipse(this.x, this.y, this.size);
+//        noFill();
+//        stroke('green');
+//        ellipse(this.x, this.y, this.size);
 	}
 	
 	update() {
@@ -26,7 +24,7 @@ class Asteroid extends Entity {
         
         this.x = this.start + sin(this.angle) * this.spread;
         
-        this.angle += 0.015;
+        this.angle += 0.009;
         
 		
 		// remove asteroids below the canvas

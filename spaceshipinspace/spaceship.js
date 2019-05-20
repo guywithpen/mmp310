@@ -13,12 +13,12 @@ class Spaceship extends Entity {
     
         
         // debug
-        noFill();
-        stroke ('yellow');
-        ellipse (this.x, this.y,this.size);
-        
-        fill('yellow');
-        ellipse(this.x, this.y, 5);
+//        noFill();
+//        stroke ('yellow');
+//        ellipse (this.x, this.y,this.size);
+//        
+//        fill('yellow');
+//        ellipse(this.x, this.y, 5);
 
 
     }

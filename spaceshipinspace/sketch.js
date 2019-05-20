@@ -9,7 +9,9 @@ var lasers = [];
 var powerups = [];
 var sprite;
 var strike;
+var terror;
 var outterspace;
+var sound;
 
 // probability asteroid spawned in each frame
 var asteroidProb = 99;
@@ -26,10 +28,14 @@ var score = 0;
 // player lives
 var lives = 3;
 
+var chapter = 'intro'; // game
+
 function preload() {
     sprite = loadImage("sprite.png");
     strike = loadImage("strike.png");
+    terror = loadImage("terror.png");
     outterspace = loadImage("outterspace.jpg");
+    sound = loadSound("sound/8bitspeedrun.mp3");
 }
 
 function setup() {
@@ -44,6 +50,26 @@ function setup() {
 }
 
 function draw() {
+    if (chapter == 'intro') {
+        intro();
+    } else if (chapter  == 'game') {
+        game();
+    }
+    
+}
+function mouseClicked(){
+    if (chapter == "intro"){
+         sound.loop();
+        chapter = "game";
+    } 
+   
+}
+function intro() {
+    background('black');
+    text('DARK SLAYER', width/2, height/2);
+}
+
+function game() {
     image(outterspace, width / 2, height / 2);
 
     // add random power ups
