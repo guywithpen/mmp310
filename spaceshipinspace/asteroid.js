@@ -24,7 +24,7 @@ class Asteroid extends Entity {
         
         this.x = this.start + sin(this.angle) * this.spread;
         
-        this.angle += 0.009;
+        this.angle += 0.012;
         
 		
 		// remove asteroids below the canvas

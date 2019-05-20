@@ -31,9 +31,9 @@ class Laser extends Entity {
 		image(strike, 0, 0);
         
         // hit box
-        noFill();
-        stroke('red');
-        ellipse(0, 0, this.size);
+//        noFill();
+//        stroke('red');
+//        ellipse(0, 0, this.size);
         pop();
 	}
 	
