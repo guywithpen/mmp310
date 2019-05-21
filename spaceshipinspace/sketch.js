@@ -66,6 +66,7 @@ function mouseClicked(){
 }
 function intro() {
     background('black');
+    fill("red");
     text('DARK SLAYER', width/2, height/2);
 }
 
@@ -106,6 +107,7 @@ function game() {
             laserTimeout -= 2;
             powerups[i].died = true;
             laserRed += 20;
+            if (lives < 6) lives++;
         }
         powerups[i].display();
         powerups[i].update();
@@ -145,7 +147,10 @@ function game() {
                 score += 1;
 
                 // after player hits asteroid, increase probability
-                asteroidProb -= 0.5;
+                asteroidProb -= 0.1;
+                if (asteroidProb <= 97) {
+                    asteroidProb += 2;
+                }
                 if (laserTimeout < 24) {
                     laserTimeout += 0.5;
                 }
